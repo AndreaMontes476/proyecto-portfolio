@@ -117,8 +117,8 @@ img {
 
 /* ================= IMAGEN PRINCIPAL ================= */
 .contenedor-imagen {
-  max-width: 400px;
-  margin: 40px auto;
+  max-width: 1500px;
+  margin:  auto;
   text-align: center;
 }
 
