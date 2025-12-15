@@ -10,9 +10,8 @@ body {
   font-family: 'Playfair Display', serif;
   background-color: #fff;
   color: #333;
-  max-width: 1200px;
-  margin: auto;
-  padding-top: 150px; /* espacio para header */
+  margin: 0;
+  padding-top: 150px; /* espacio para header fijo */
 }
 
 /* ================= HEADER ================= */
@@ -68,6 +67,16 @@ body {
     0 6px 12px rgba(255, 47, 133, 0.35);
 }
 
+/* ================= CONTENEDORES GENERALES ================= */
+.contenedor,
+.contenido,
+.sobre-mi,
+.experiencia,
+.footer-contenedor {
+  max-width: 1200px;
+  margin: auto;
+}
+
 /* ================= TITULOS ================= */
 h1 {
   font-size: 42px;
@@ -96,8 +105,6 @@ p {
 .contenido,
 .sobre-mi,
 .experiencia {
-  max-width: 1100px;
-  margin: auto;
   padding: 60px 20px;
 }
 
@@ -141,9 +148,9 @@ img {
   z-index: 1;
 }
 
-/* 💎 EFECTO QUE ME GUSTA */
+/* 💎 EFECTO CONTROLADO EN PC */
 .contenedor-diplomas img:hover {
-  transform: scale(2.2);
+  transform: scale(1.4);
   z-index: 10;
 }
 
@@ -187,8 +194,6 @@ img {
 }
 
 .footer-contenedor {
-  max-width: 100%;
-  margin: auto;
   padding: 0 20px;
   text-align: center;
 }
@@ -206,10 +211,6 @@ img {
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
-
-  body {
-    padding-top: 150px;
-  }
 
   h1 { font-size: 1.8rem; }
   h2 { font-size: 1.4rem; }
@@ -229,7 +230,7 @@ img {
     grid-template-columns: 1fr;
   }
 
-  /* mantiene el efecto pero usable */
+  /* zoom usable en mobile */
   .contenedor-diplomas img:hover {
     transform: scale(1.3);
   }
