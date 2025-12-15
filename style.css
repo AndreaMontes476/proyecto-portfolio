@@ -334,3 +334,64 @@ header {
 .contenedor-diplomas img:hover {
   transform: scale(2.55);
 }
+/* ===== RESET BÁSICO ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ===== IMÁGENES RESPONSIVE ===== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== CONTENEDORES ===== */
+.contenedor,
+.contenedor-nav,
+.botonera,
+section {
+  display: flex;
+  gap: 15px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .contenedor,
+  .contenedor-nav,
+  .botonera,
+  section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
