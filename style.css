@@ -189,6 +189,11 @@ img {
 .box-linkedin { background-color: #e6f0ff; }
 .box-wtsp { background-color: #e9fff2; }
 
+.full-width {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
 /* ================= FOOTER ================= */
 .footer {
   background: linear-gradient(145deg, #ff5fa2, #ff2f85);
