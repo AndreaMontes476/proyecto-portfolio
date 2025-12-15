@@ -190,8 +190,9 @@ img {
 .box-wtsp { background-color: #e9fff2; }
 
 .imagen-full{
-  padding: 45px 0;
-  margin-top: 50px;
+  width: 100%;
+  margin: 0;
+  padding: 60px 20px;
 }
 
 /* ================= FOOTER ================= */
