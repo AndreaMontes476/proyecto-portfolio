@@ -11,13 +11,13 @@ body {
   background-color: #fff;
   color: #333;
   margin: 0;
-  padding-top: 150px; /* espacio para header fijo */
+  padding-top: 150px; /* compensación header fijo */
 }
 
 /* ================= HEADER ================= */
 .header {
   background-color: #ffd6e8;
-  height: 150px;
+  min-height: 150px; /* CLAVE: permite crecer en mobile */
   width: 100%;
   position: fixed;
   top: 0;
@@ -38,6 +38,11 @@ body {
 }
 
 /* ================= BOTONES HEADER ================= */
+.enlaces-header {
+  display: flex;
+  align-items: center;
+}
+
 .enlaces-header a {
   text-decoration: none;
   padding: 12px 22px;
@@ -117,7 +122,7 @@ ul {
   margin-bottom: 40px;
 }
 
-/* ================= IMÁGENES GENERALES ================= */
+/* ================= IMÁGENES ================= */
 img {
   max-width: 100%;
   height: auto;
@@ -147,7 +152,7 @@ img {
   gap: 20px;
 }
 
-/* Estado normal */
+/* estado normal */
 .contenedor-diplomas img {
   width: 100%;
   object-fit: contain;
@@ -155,19 +160,17 @@ img {
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
   transition: transform 0.35s ease, opacity 0.35s ease;
   cursor: zoom-in;
-  position: relative;
-  z-index: 1;
   transform: scale(0.92);
   opacity: 0.9;
 }
 
-/* Apagar resto */
+/* atenuar resto */
 .contenedor-diplomas:hover img {
   opacity: 0.45;
   transform: scale(0.88);
 }
 
-/* Hover activo */
+/* foco activo */
 .contenedor-diplomas img:hover {
   transform: scale(1.2);
   opacity: 1;
@@ -194,9 +197,9 @@ img {
   text-align: center;
   min-height: 160px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   box-shadow: 0 8px 20px rgba(0,0,0,0.12);
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -233,33 +236,39 @@ img {
   h2 { font-size: 1.4rem; }
   p  { font-size: 1rem; }
 
+  .header {
+    padding: 15px 0;
+  }
+
   .contenedor.nav {
     flex-direction: column;
     gap: 15px;
   }
 
+  .enlaces-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .enlaces-header a {
     display: block;
     margin: 8px 0;
+    width: 100%;
+    max-width: 260px;
   }
 
   .contacto-grid {
     grid-template-columns: 1fr;
   }
 
-  /* Diplomas más suaves en mobile */
-  .contenedor-diplomas img {
-    transform: scale(1);
-    opacity: 1;
-  }
-
+  /* diplomas mobile */
+  .contenedor-diplomas img,
   .contenedor-diplomas:hover img {
-    opacity: 1;
     transform: scale(1);
+    opacity: 1;
   }
 
   .contenedor-diplomas img:hover {
     transform: scale(1.05);
   }
 }
-
