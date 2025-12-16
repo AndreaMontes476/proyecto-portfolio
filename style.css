@@ -11,22 +11,19 @@ body {
   background-color: #fff;
   color: #333;
   margin: 0;
-  padding-top: 150px; /* compensación header fijo */
 }
 
 /* ================= HEADER ================= */
 .header {
   background-color: #ffd6e8;
-  min-height: 150px; /* CLAVE: permite crecer en mobile */
   width: 100%;
-  position: fixed;
+  position: sticky;   /* CLAVE: no se sale en mobile */
   top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
   z-index: 1000;
+  padding: 20px 0;    /* el header crece según contenido */
 }
 
+/* ================= NAV ================= */
 .contenedor.nav {
   width: 100%;
   max-width: 1200px;
@@ -40,13 +37,14 @@ body {
 /* ================= BOTONES HEADER ================= */
 .enlaces-header {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;        /* evita desbordes */
+  justify-content: center;
+  gap: 10px;
 }
 
 .enlaces-header a {
   text-decoration: none;
   padding: 12px 22px;
-  margin: 0 6px;
   font-weight: 600;
   font-size: 15px;
   color: #fff;
@@ -152,7 +150,6 @@ img {
   gap: 20px;
 }
 
-/* estado normal */
 .contenedor-diplomas img {
   width: 100%;
   object-fit: contain;
@@ -164,13 +161,11 @@ img {
   opacity: 0.9;
 }
 
-/* atenuar resto */
 .contenedor-diplomas:hover img {
   opacity: 0.45;
   transform: scale(0.88);
 }
 
-/* foco activo */
 .contenedor-diplomas img:hover {
   transform: scale(1.2);
   opacity: 1;
@@ -236,23 +231,17 @@ img {
   h2 { font-size: 1.4rem; }
   p  { font-size: 1rem; }
 
-  .header {
-    padding: 15px 0;
-  }
-
   .contenedor.nav {
     flex-direction: column;
-    gap: 15px;
   }
 
   .enlaces-header {
     flex-direction: column;
+    width: 100%;
     align-items: center;
   }
 
   .enlaces-header a {
-    display: block;
-    margin: 8px 0;
     width: 100%;
     max-width: 260px;
   }
@@ -272,3 +261,4 @@ img {
     transform: scale(1.05);
   }
 }
+
